@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Order Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Pizza Order Form</h1>
+  </header>
+
+  <main>
+    <form action="confirm.html" method="POST">
+      <fieldset>
+        <legend>Order Details</legend>
+        
+        <label for="number-of-pizzas">Number of Pizzas:</label>
+        <input type="number" id="number-of-pizzas" name="number-of-pizzas" min="1" required>
+
+        <label for="pizza-size">Size:</label>
+        <select id="pizza-size" name="pizza-size" required>
+          <option value="">Select Size</option>
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
+
+        <label for="pizza-shape">Shape:</label>
+        <div class="radio-group">
+          <input type="radio" id="round-shape" name="pizza-shape" value="round" required>
+          <label for="round-shape">Round</label>
+          <input type="radio" id="square-shape" name="pizza-shape" value="square" required>
+          <label for="square-shape">Square</label>
+        </div>
+
+        <label for="toppings">Toppings:</label>
+        <div class="checkbox-group">
+          <input type="checkbox" id="cheese" name="toppings" value="cheese">
+          <label for="cheese">Cheese</label>
+          <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+          <label for="pepperoni">Pepperoni</label>
+          <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+          <label for="mushrooms">Mushrooms</label>
+        </div>
+
+        <label for="crust-type">Crust Type:</label>
+        <select id="crust-type" name="crust-type" required>
+          <option value="">Select Crust Type</option>
+          <option value="deep-dish">Deep Dish</option>
+          <option value="thin-crust">Thin Crust</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="order-type">Order Type:</label>
+        <div class="radio-group">
+          <input type="radio" id="takeout" name="order-type" value="takeout" required>
+          <label for="takeout">Takeout</label>
+          <input type="radio" id="delivery" name="order-type" value="delivery" required>
+          <label for="delivery">Delivery</label>
+          <input type="radio" id="eat-in" name="order-type" value="eat-in" required>
+          <label for="eat-in">Eat-in</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Contact Information</legend>
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Comments</legend>
+        
+        <textarea id="comments" name="comments" rows="4"></textarea>
+      </fieldset>
+
+      <input type="submit" value="Place Order">
+      <input type="reset" value="Reset">
+    </form>
+  </main>
+
+  <footer>
+    <p>Image source: <a href="https://www.example.com">Example Pizza</a></p>
+    <p>&copy; 2023 Pizza House. All rights reserved.</p>
+  </footer>
+</body>
+</html>
